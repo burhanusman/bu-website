@@ -2,7 +2,7 @@
 title: "Zappos footwear classification"
 subtitle: "How I built a simple ML system to do gender based footwear classification."
 date: 2019-04-06T14:09:17+05:30
-draft: true
+draft: false
 tags: ["AI","ML"]
 ---
 Recently I stumbled across the well labelled Zappos50K dataset and realised a lot of interesting use cases can be built with it. I decided to start with a simple binary classification model to classify footwear on the basis of gender.
