@@ -1,4 +1,4 @@
-baseURL = "http://www.burhanusman.com/"
+baseURL = "https://www.burhanusman.com/"
 languageCode = "en-us"
 title = "Burhan Usman"
 theme ="hyde"
