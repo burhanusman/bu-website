@@ -1,0 +1,22 @@
+{{ define "main" -}}
+{{.Content}}
+{{range .Sections -}}
+<div class="row">
+            <div class="col-sm-12">
+                <div class="card">
+                    <h4 class="card-header">{{.Title}}</h4>
+                    <div class="card-body">
+                        <ul>
+                            {{ range .Pages}}
+                            <li>
+                                <a href="{{.Permalink}}">{{.Title}}</a>
+                            </li>
+                            {{ end }}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+{{end}}
+{{end}}
+

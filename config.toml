@@ -1,0 +1,40 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "Burhan Usman"
+theme ="hyde"
+pygmentsCodeFences=true
+pygmentsUseClasses=true
+pygmentsStyle="autumn"
+canonifyURLs=true
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "Blog"
+    pre = "<i class='fa fa-heart'></i>"
+    url = "/blog/"
+    weight = 0
+
+  [[menu.main]]
+    name = "Projects"
+    post = "<span class='alert'>New!</span>"
+    pre = "<i class='fa fa-road'></i>"
+    url = "/projects/"
+    weight = 2
+
+  [[menu.main]]
+    name = "AI/ML Notes"
+    post = "<span class='alert'>New!</span>"
+    pre = "<i class='fa fa-road'></i>"
+    url = "/notes/"
+    weight = -100
+
+  [[menu.main]]
+    name = "Books"
+    post = "<span class='alert'>New!</span>"
+    pre = "<i class='fa fa-road'></i>"
+    url = "/books/booklist"
+    weight =3
+
+

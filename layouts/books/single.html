@@ -1,0 +1,32 @@
+{{ define "main" -}}
+{{.Content}}
+<ul class="">
+{{ range .Site.Data.goodreads -}}
+  <div class="post">
+<p class="post-meta">Feb 21, 2019</p>
+<a href="" class=""><h3 class="">{{.Title}}</h3></a>
+<div class="metadata" style="padding-bottom: 1em;">
+<span>
+  <b>{{"★" | strings.Repeat .Rating }} </b>
+</span>
+
+		<span class="vertical-separator" style="border-right: thin solid #A9A9A9; margin-right: 20px; padding-left: 15px;"></span>
+
+
+  <a href="/book" class="badge badge-red-base">book</a>
+
+  <a href="/nonfiction" class="badge badge-light-green-base">nonfiction</a>
+
+  <a href="/random" class="badge badge-blue-grey-100">random</a>
+
+
+</div>
+<img class="inline" src="https://images.gr-assets.com/books/1518291452m/25541028.jpg" alt="Book Cover" style="display: inline-block;">
+<p style="display: inline-block; vertical-align: top; margin-left: 20px">{{.Description}}</p>	
+</div>	
+{{- end }}
+</ul>
+
+{{- end }}
+
+
