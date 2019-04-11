@@ -1,7 +1,7 @@
 ---
 title: "Plotting a Normal Curve"
 date: 2019-04-06T21:54:24+05:30
-draft: true
+draft: false
 ---
 
 ### Plotting a Normal Curve
