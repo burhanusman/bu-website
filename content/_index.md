@@ -4,7 +4,6 @@
 
 Hi there. I'm a data-scientist currently working with a Big-4 consultancy.
 I have recently found my passion for data-science and machine learning.
-I really believe 
 You are welcome to read one of my [blogs](/blog), or check out some
 of the things I built under [projects](/projects).
 
