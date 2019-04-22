@@ -6,6 +6,8 @@ pygmentsCodeFences=true
 pygmentsUseClasses=true
 pygmentsStyle="autumn"
 canonifyURLs=true
+googleAnalytics = "UA-138746712-1"
+
 ##
 #[menu]
 
