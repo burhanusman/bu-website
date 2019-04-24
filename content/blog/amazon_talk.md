@@ -8,7 +8,7 @@ tags: ["AI","ML"]
 Recently I attended a talk by Mr Part Gupta, an ML engineer at Amazon. It was
 mostly about the Machine Learning use cases at Amazon. The talk was quite
 informative as I had attended few courses on Machine Learning and Information
-Retrieval. This post is a summary of the talk.
+Retrieval. This post is a summary of the talk. <!--more-->
 
 *****
 
