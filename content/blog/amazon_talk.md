@@ -1,7 +1,7 @@
 ---
 title: "Machine Learning at Amazon"
 subtitle: "A talk I attended by an ML engineer"
-date: 2019-04-06 T14:09:17+05:30
+date: 2019-04-06T14:09:17+05:30
 draft: false
 tags: ["AI","ML"]
 ---
