@@ -1,5 +1,5 @@
 ---
-title: "Zappos footwear classification"
+title: "Zappos Footwear Classification"
 subtitle: "How I built a simple ML system to do gender based footwear classification."
 date: 2019-04-06T14:09:17+05:30
 draft: false
