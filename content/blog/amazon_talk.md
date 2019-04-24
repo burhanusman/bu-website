@@ -101,7 +101,7 @@ recognition because it impacts user experience
 Personalisation: *Personalised deals to be offered to users according to their
 past buying habits.* — Short-duration: *The deals run for a short time.
 Optimisation to be done considering that.
-1.  **Question and Answering: **Answer user’s questions in any context — Echo,
+1.  **Question and Answering:** Answer user’s questions in any context — Echo,
 Mobile, Desktop, Apps etc<br>  — *Complexity and Variability of the questions:
 *Open-ended* — Source of information: *It’s important to choose the right source
 of information to answer user queries — especially in the era of fake news!* —
