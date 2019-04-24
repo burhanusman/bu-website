@@ -22,7 +22,7 @@ Retrieval. This post is a summary of the talk.
 
 **Machine Learning Use Cases @Amazon.**
 
-1.  **Product Recommendation:** Recommend the *right product *to the *right
+1.  **Product Recommendation:** Recommend the *right product* to the *right
 customer* in the *right place* at the *right time*. <br> Challenges:<br>  —
 *Scale*: Amazon has hundreds of millions of users. Personalised product
 recommendations are to be made to each one of them.<br>  — *Personalisation*:
@@ -59,7 +59,7 @@ in the training data for a particular category.
 in the Amazon category. <br> Challenges:<br>  — *Scale*: The Amazon catalog
 contains 100+ million product listings. Looking for duplicates among these
 listings is gonna be challenging.<br>  — *High precision requirement*: It’s very
-important that only the *same *products are listed as on listings. If not a
+important that only the *same* products are listed as on listings. If not a
 hell-lot of problems are gonna happen, customer getting the wrong good for
 starters.<br>  — *Incorrect/Missing Data*: Again, some of the descriptions might
 have missing inputs. The model should take care of these.<br>  — *Variations*:
@@ -79,8 +79,8 @@ a very short time, every time.<br>  — *Explore and exploit*: The popular
 reinforcement learning paradigm is to be used here because the creatives are
 changing dynamically and customer interests keep changing.
 1.  **Information Extraction From Reviews:** Extract product attributes and ratings
-from reviews.<br> Challenges: <br> * — Diverse Product Attributes: *Since the
-products are diverse, so would the attributes. ** —* Informal Styles of the
+from reviews.<br> Challenges: <br> *— Diverse Product Attributes:* Since the
+products are diverse, so would the attributes. * —Informal Styles of the
 comments:* Often the comments are written in an informal style making it
 difficult to use conventional IR methods<br>  — *Short Text*: Many of the
 comments are really short and extracting useful information might be difficult
@@ -101,7 +101,7 @@ recognition because it impacts user experience
 Personalisation: *Personalised deals to be offered to users according to their
 past buying habits.* — Short-duration: *The deals run for a short time.
 Optimisation to be done considering that.
-1.  **Question and Answering:** Answer user’s questions in any context — Echo,
+1.  **Question and Answering:**  Answer user’s questions in any context — Echo,
 Mobile, Desktop, Apps etc<br>  — *Complexity and Variability of the questions:
 *Open-ended* — Source of information: *It’s important to choose the right source
 of information to answer user queries — especially in the era of fake news!* —
