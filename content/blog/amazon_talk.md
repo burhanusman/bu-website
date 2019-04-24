@@ -80,7 +80,7 @@ reinforcement learning paradigm is to be used here because the creatives are
 changing dynamically and customer interests keep changing.
 1.  **Information Extraction From Reviews:** Extract product attributes and ratings
 from reviews.<br> Challenges: <br> *— Diverse Product Attributes:* Since the
-products are diverse, so would the attributes. * —Informal Styles of the
+products are diverse, so would the attributes. *—Informal Styles of the
 comments:* Often the comments are written in an informal style making it
 difficult to use conventional IR methods<br>  — *Short Text*: Many of the
 comments are really short and extracting useful information might be difficult
