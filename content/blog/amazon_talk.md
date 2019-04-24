@@ -22,7 +22,7 @@ Retrieval. This post is a summary of the talk.
 
 **Machine Learning Use Cases @Amazon.**
 
-1.  **Product Recommendation: **Recommend the *right product *to the *right
+1.  **Product Recommendation:** Recommend the *right product *to the *right
 customer* in the *right place* at the *right time*. <br> Challenges:<br>  —
 *Scale*: Amazon has hundreds of millions of users. Personalised product
 recommendations are to be made to each one of them.<br>  — *Personalisation*:
@@ -46,8 +46,7 @@ to incorporate these variations in the model.
 1.  **Product Classification**: Given a product description from a seller, map it to
 the appropriate product category. Amazon maintains a product category which is
 structured as a tree, and final categories lying in one of the leaf nodes.<br>
-Challenges: <br>  — *Scale* : Number of product categories are high, more than
-1000. Classifying things into these many categories is gonna be a task.<br>  —
+Challenges: <br>  — *Scale* : Number of product categories are high, more than 1000. Classifying things into these many categories is gonna be a task.<br>  —
 *Fuzzy Class definitions*: Often the product categories are fuzzy because the
 nature of products is so. <br>  — *Multi-label and Multi-class*: Products might
 belong to more than one category. <br>  — *Incorrect/Missing data*: The product
@@ -56,7 +55,7 @@ those.<br>  — *Product Vs Accessories:* It’s often hard to distinguish betwe
 the descriptions of a product and some of its accessories.<br>  — *Training data
 quality*: Training data may be badly labelled, or often there are few products
 in the training data for a particular category.
-1.  **Product Matching: **Given product information, find duplicate product listings
+1.  **Product Matching:** Given product information, find duplicate product listings
 in the Amazon category. <br> Challenges:<br>  — *Scale*: The Amazon catalog
 contains 100+ million product listings. Looking for duplicates among these
 listings is gonna be challenging.<br>  — *High precision requirement*: It’s very
@@ -66,11 +65,11 @@ starters.<br>  — *Incorrect/Missing Data*: Again, some of the descriptions mig
 have missing inputs. The model should take care of these.<br>  — *Variations*:
 Products might be subtly different, and they should be listed separately. The
 model should be able to take care of these small variations.
-1.  **Product Search: **This is probably the most important ML task at Amazon. Given
+1.  **Product Search:** This is probably the most important ML task at Amazon. Given
 a partial query, find the right product for the right customer, in the right
 place at the right time. This statement summarises any Information Retrieval
 task.
-1.  **Ad-Click Probability: **Predict the performance (click-through rates,
+1.  **Ad-Click Probability:** Predict the performance (click-through rates,
 conversion rate) of an ad. <br> Challenges:<br>  — *Sparsity of the training
 data*: Ad-Clicks are really rare (How many time do you click on an ad on any web
 page ?!). Hence the training data would be imbalanced towards no-clicks.<br>  —
@@ -79,7 +78,7 @@ in the real-time bidding that’s happening. Hence the prediction is to be done 
 a very short time, every time.<br>  — *Explore and exploit*: The popular
 reinforcement learning paradigm is to be used here because the creatives are
 changing dynamically and customer interests keep changing.
-1.  **Information Extraction From Reviews: **Extract product attributes and ratings
+1.  **Information Extraction From Reviews:** Extract product attributes and ratings
 from reviews.<br> Challenges: <br> * — Diverse Product Attributes: *Since the
 products are diverse, so would the attributes. ** —* Informal Styles of the
 comments:* Often the comments are written in an informal style making it
