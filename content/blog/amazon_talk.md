@@ -85,13 +85,12 @@ comments:* Often the comments are written in an informal style making it
 difficult to use conventional IR methods<br>  — *Short Text*: Many of the
 comments are really short and extracting useful information might be difficult
 1.  **Visual Search:** Recognise products in an image and map it to the Amazon
-Catalog<br> Challenges : <br>  — *Detecting a product from the image: *The image
+Catalog<br> Challenges : <br>  — *Detecting a product from the image:*The image
 to be searched would be of any kind, and detecting a specific product in that
-image would be challenging. * — Wide variety of products in the Amazon category:
-*Sifting through the Amazon catalog containing millions of images is also
+image would be challenging. *— Wide variety of products in the Amazon category:* Sifting through the Amazon catalog containing millions of images is also
 challenging.
 1.  **Speech Recognition:** With Alexa in the scene, this is a major use case for
-Amazon.<br> Challenges: <br>  — *Real-Time Recognition: *The speech is to be
+Amazon.<br> Challenges: <br>  — *Real-Time Recognition:* The speech is to be
 recognised and responded on the fly.** — *Unconstrained Environment*: Need to
 deal with the background noise<br>  — *Speaker Adaptation*: Adapt and involve
 specific to the current user.<br>  — S*peaker Independent*: Generalisability to
@@ -99,21 +98,11 @@ new users<br>  — *Word Error Rate*: Need to decrease the amount mistakes done 
 recognition because it impacts user experience
 1.  **Deal Ranking:** Rank Deals to maximise relevance or revenue* —
 Personalisation: *Personalised deals to be offered to users according to their
-past buying habits.* — Short-duration: *The deals run for a short time.
+past buying habits.*— Short-duration:*The deals run for a short time.
 Optimisation to be done considering that.
 1.  **Question and Answering:**  Answer user’s questions in any context — Echo,
-Mobile, Desktop, Apps etc<br>  — *Complexity and Variability of the questions:
-*Open-ended* — Source of information: *It’s important to choose the right source
-of information to answer user queries — especially in the era of fake news!* —
-High Precision and Recall:  — Variability in customer-created content: *The
+Mobile, Desktop, Apps etc<br>  — *Complexity and Variability of the questions:* Open-ended *— Source of information:* It’s important to choose the right source
+of information to answer user queries — especially in the era of fake news!<br> 
+*—High Precision and Recall:*— Variability in customer-created content:* The
 answers would differ from customer to customer, based on their history, buying
 habits, wish-lists, reminders etc.
-
-* [Machine Learning](https://medium.com/tag/machine-learning?source=post)
-* [Amazon](https://medium.com/tag/amazon?source=post)
-* [Artificial
-Intelligence](https://medium.com/tag/artificial-intelligence?source=post)
-* [Data Science](https://medium.com/tag/data-science?source=post)
-* [Technology](https://medium.com/tag/technology?source=post)
-
-### [Burhan Usman](https://medium.com/@burhanusman)
