@@ -30,7 +30,6 @@ plot_normal(0,1)
 
 
 
-    <matplotlib.axes._subplots.AxesSubplot at 0x1bca95a2320>
 
 
 
