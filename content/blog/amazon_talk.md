@@ -84,20 +84,20 @@ products are diverse, so would the attributes. ** —* Informal Styles of the
 comments:* Often the comments are written in an informal style making it
 difficult to use conventional IR methods<br>  — *Short Text*: Many of the
 comments are really short and extracting useful information might be difficult
-1.  **Visual Search: **Recognise products in an image and map it to the Amazon
+1.  **Visual Search:** Recognise products in an image and map it to the Amazon
 Catalog<br> Challenges : <br>  — *Detecting a product from the image: *The image
 to be searched would be of any kind, and detecting a specific product in that
 image would be challenging. * — Wide variety of products in the Amazon category:
 *Sifting through the Amazon catalog containing millions of images is also
 challenging.
-1.  **Speech Recognition: **With Alexa in the scene, this is a major use case for
+1.  **Speech Recognition:** With Alexa in the scene, this is a major use case for
 Amazon.<br> Challenges: <br>  — *Real-Time Recognition: *The speech is to be
 recognised and responded on the fly.** — *Unconstrained Environment*: Need to
 deal with the background noise<br>  — *Speaker Adaptation*: Adapt and involve
 specific to the current user.<br>  — S*peaker Independent*: Generalisability to
 new users<br>  — *Word Error Rate*: Need to decrease the amount mistakes done in
 recognition because it impacts user experience
-1.  **Deal Ranking: **Rank Deals to maximise relevance or revenue* —
+1.  **Deal Ranking:** Rank Deals to maximise relevance or revenue* —
 Personalisation: *Personalised deals to be offered to users according to their
 past buying habits.* — Short-duration: *The deals run for a short time.
 Optimisation to be done considering that.
