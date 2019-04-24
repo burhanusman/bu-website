@@ -5,14 +5,6 @@ date: 2019-04-06T14:09:17+05:30
 draft: false
 tags: ["AI","ML"]
 ---
-
-![](https://cdn-images-1.medium.com/max/800/0*lFUsPdusuKcqODJ7.)
-<span class="figcaption_hack">Photo by [Silvio
-Kundt](https://unsplash.com/@eskandthewood?utm_source=medium&utm_medium=referral)
-on [Unsplash](https://unsplash.com/?utm_source=medium&utm_medium=referral)</span>
-
-# Machine Learning at Amazon
-
 Recently I attended a talk by Mr Part Gupta, an ML engineer at Amazon. It was
 mostly about the Machine Learning use cases at Amazon. The talk was quite
 informative as I had attended few courses on Machine Learning and Information
