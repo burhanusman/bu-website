@@ -1,4 +1,8 @@
-
+---
+title: "Tag Feature Extraction"
+date: 2019-04-06T21:54:24+05:30
+draft: false
+---
 # Converting tags into features
 This note is about converting a set of tags in each item to a set of features
 
