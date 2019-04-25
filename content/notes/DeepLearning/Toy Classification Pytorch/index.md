@@ -3,7 +3,7 @@ title: "Pytorch Toy Classification"
 date: 2019-04-06T21:54:24+05:30
 draft: false
 ---
-# Making a one-hidden layer neural network with pytorch
+## Making a one-hidden layer neural network with pytorch
 
 ### Importing the required libraries
 
