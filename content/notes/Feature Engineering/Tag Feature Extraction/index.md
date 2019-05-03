@@ -206,8 +206,11 @@ vectorizer.get_feature_names()[75:80]
 
 ```python
 count_features_train=pd.DataFrame(vectorizer.transform(list(train.CUISINES)).todense(),columns=vectorizer.get_feature_names())
+
 train=pd.concat([train,count_features_train],axis=1)
+
 count_features_test=pd.DataFrame(vectorizer.transform(list(test.CUISINES)).todense(),columns=vectorizer.get_feature_names())
+
 train=pd.concat([test,count_features_test],axis=1)
 ```
 
