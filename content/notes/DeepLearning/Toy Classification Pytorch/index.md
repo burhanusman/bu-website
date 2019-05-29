@@ -30,11 +30,6 @@ We use the make moons dataset from Scikit-Learn
 
 
 ```python
-
-```
-
-
-```python
 X, Y = make_moons(noise=0.2, random_state=0, n_samples=1000)
 ```
 
@@ -126,14 +121,6 @@ plt.plot(losses)
     number of epoch 9999 loss tensor(0.3434)
     Train Accuracy: 0.972
     Test Accuracy: 0.95
-    
-
-
-
-
-    [<matplotlib.lines.Line2D at 0x7f334cb2f320>]
-
-
 
 
 ![png](output_15_2.png)
@@ -178,8 +165,3 @@ ax.set(xlabel='X', ylabel='Y', title='NN with {} layers'.format(hidden_layers));
 
 ![png](output_19_0.png)
 
-
-
-```python
-
-```
