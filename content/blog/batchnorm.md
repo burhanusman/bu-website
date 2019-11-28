@@ -22,7 +22,7 @@ The short answer is it helps in setting hyper-parameters and initial conditions 
 The concept is so simple that you start thinking why no one thought about it before the actual paper. This often happens, like in magic, where you see the trick is so easy once you know how it is done.
 In Batchnorm, we normalise the activations from a hidden layer across a batch. We also scale it up using learnt parameters. 
 
-![Example image](/static/batchnorm.png) 
+![Example image](/batchnorm.png) 
 
 
 ### How it helps:
