@@ -5,14 +5,13 @@ date: 2019-08-12T14:09:17+05:30
 draft: false
 tags: ["AI","ML"]
 ---
-# All You Need To Know About BatchNorm 
-
 I had a hard time wrapping my head around on why BatchNorm was used until I read 'deeply' about it. I'll try explaining the concept and the reason why it works.
 
-## Motivation 
 ### Normalization and Standardization in machine learning 
 Although Normalization and standardization are often used interchangeably, it's good to know the difference between them.
->**Normalization**: Normalization means to scale a variable to have a values between 0 and 1,
+
+
+>**Normalization**: Normalization means to scale a variable to have a values between 0 and 1    
 >**Standardization**:  Standardization transforms data to have a mean of zero and a standard deviation of 1
 
 Before we understand why batchnorm is useful, we better understand why standardization is used in machine learning algorithms. 
@@ -23,13 +22,18 @@ The short answer is it helps in setting hyper-parameters and initial conditions 
 The concept is so simple that you start thinking why no one thought about it before the actual paper. This often happens, like in magic, where you see the trick is so easy once you know how it is done.
 In Batchnorm, we normalise the activations from a hidden layer across a batch. We also scale it up using learnt parameters. 
 
+![Example image](/static/batchnorm.png) 
+
+
 ### How it helps:
-1. *Train Faster*: It is shown from experiments that networks which implements batchnorm between some of their layers train faster than ordinary networks. This is because the optimisation converges quickly 
+1. *Train Faster*: It is shown from experiments that networks which implements batchnorm between some of their layers train faster than ordinary networks. This is because the optimisation converges quickly.
+
 2. *Less sensitive to choice of parameters*: Another great thing of using batchnorm is that it makes the network less sensitive to hyperparamter choice. This is a boon to all deep learning practitionaers because it's one area where a lot of time is spent while developing the model.
 
 ### Why BatchNorm works?
-**The wrong answer : Internal Covariance Shift:**
-The original batchnorm paper **~~**claims**~~** it works because of it helps to reduce internal covariacnce shift.
+**The wrong answer - Internal Covariance Shift:**
+
+The original batchnorm paper says that it works because it reduces internal covariacnce shift.
 
 Covariance shift is a phenomenon where the input distribution to a learning algorithm keeps changing and hence the algorithm doesn't learn a lot. This happens because every learning algorithm tries to minimizing the loss where the training examples densely populated.  Hence the distribution changes higher density regions also change. 
 
@@ -48,9 +52,6 @@ Many of the deep learning optimization techniques use only first derivative to m
 
 To see why this is, we could go to the basics and understand backprop a bit better. So backprop (generally) uses first derivatives to make gradient updates. An underlying assumption here is that the higher-order derivatives are small and doesn't affect the optimization a lot. The fact is this is not always true. We could see this using an example as follows. 
 
-
-(Adapted from *Deep learning by Ian GoodFellow*)
-
 ### When to normalize?
 Should we normalize before the activation function or after the activation function? Although normalizing z (before the activation) was suggested in the paper, it is often done the other way. Normalizing the activation make sense because that's what goes to the next layer, and it might help better to  decouple the layer interactions. 
 
@@ -59,7 +60,7 @@ This was a skim through the actual math behind the batchnorm. From what I read, 
 
 ### References
 
- 1. [https://blog.paperspace.com/busting-the-myths-about-batch-normalization/](https://blog.paperspace.com/busting-the-myths-about-batch-normalization/)
- 2. [http://gradientscience.org/batchnorm/](http://gradientscience.org/batchnorm/)
- 3. [https://mlexplained.com/2018/01/10/an-intuitive-explanation-of-why-batch-normalization-really-works-normalization-in-deep-learning-part-1/](https://mlexplained.com/2018/01/10/an-intuitive-explanation-of-why-batch-normalization-really-works-normalization-in-deep-learning-part-1/)
- 4. 
+ 1. [Paperspace Blog](https://blog.paperspace.com/busting-the-myths-about-batch-normalization/)
+ 2. [Gradient Science Blog](http://gradientscience.org/batchnorm/)
+ 3. [Article on ML-Explained](https://mlexplained.com/2018/01/10/an-intuitive-explanation-of-why-batch-normalization-really-works-normalization-in-deep-learning-part-1/)
+ 
