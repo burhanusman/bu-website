@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Feature Engineering on Burhan Usman</title>
+    <link>https://www.burhanusman.com/notes/feature-engineering/</link>
+    <description>Recent content in Feature Engineering on Burhan Usman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Apr 2019 14:53:47 +0530</lastBuildDate>
+    
+	<atom:link href="https://www.burhanusman.com/notes/feature-engineering/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Tag Feature Extraction</title>
+      <link>https://www.burhanusman.com/notes/feature-engineering/tag-feature-extraction/</link>
+      <pubDate>Sat, 06 Apr 2019 21:54:24 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/feature-engineering/tag-feature-extraction/</guid>
+      <description>Converting tags into features This note is about converting a set of tags in each item to a set of features
+import pandas as pd import numpy as np from sklearn.feature_extraction.text import CountVectorizer train=pd.read_excel(&amp;#34;data/Participants_Data_Final/Data_Train.xlsx&amp;#34;) test=pd.read_excel(&amp;#34;data/Participants_Data_Final/Data_Test.xlsx&amp;#34;) train.head() .dataframe tbody tr th {vertical-align: top;}.dataframe thead th {text-align: right;} We&amp;rsquo;ll be dealing with the cuisines column which has different cuisines corresponding restaurant We&amp;rsquo;ll take a look at train and test cuisines separately to see if there are more cusines in test</description>
+    </item>
+    
+  </channel>
+</rss>

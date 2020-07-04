@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Machine Learning at Amazon &middot; Burhan Usman</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/print.css" media="print">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/bucustom.css">
+  
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.burhanusman.com/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://www.burhanusman.com/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Burhan Usman" />
+
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://www.burhanusman.com/"><h1>Burhan Usman</h1></a>
+      <p class="lead">
+      An ML Enthusiast
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://www.burhanusman.com/">Home</a> </li>
+        <li><a href="https://www.burhanusman.com/blog/"> Blog </a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Machine Learning at Amazon</h1>
+  <p class="subtitle">A talk I attended by an ML engineer</p>
+  <time datetime=2019-04-06T14:09:17&#43;0530 class="post-date">Sat, Apr 6, 2019</time>
+  <p>Recently I attended a talk by Mr Part Gupta, an ML engineer at Amazon. It was
+mostly about the Machine Learning use cases at Amazon. The talk was quite
+informative as I had attended few courses on Machine Learning and Information
+Retrieval. This post is a summary of the talk.</p>
+<hr>
+<p><strong>Machine Learning Use Cases @Amazon.</strong></p>
+<ol>
+<li><strong>Product Recommendation:</strong> Recommend the <em>right product</em> to the <em>right
+customer</em> in the <em>right place</em> at the <em>right time</em>. <!-- raw HTML omitted --> Challenges:<!-- raw HTML omitted -->  —
+<em>Scale</em>: Amazon has hundreds of millions of users. Personalised product
+recommendations are to be made to each one of them.<!-- raw HTML omitted -->  — <em>Personalisation</em>:
+Product preference may vary greatly across different users.<!-- raw HTML omitted -->  — <em>Real Time:</em>
+The recommendations should happen in real-time. This requires that there is low
+latency.<!-- raw HTML omitted -->  — <em>Cold-start:</em> This is a problem with any recommender system. How
+to recommend a product to a new user (since recommendations usually use a users
+past browsing data on the platform). Also, to whom to recommend new products
+which are added to the platform.</li>
+<li><strong>Product Demand and Forecasting</strong> : Given past sales of a product in every
+region, predict regional demand up to one year in future. <!-- raw HTML omitted --> This is important
+for Amazon because often they stock-up the inventory at some of the Fulfilment
+Centres<!-- raw HTML omitted --> <em>Challenges</em>:<!-- raw HTML omitted -->  — <em>Scale: 20</em>+ million products fulfilled by
+Amazon alone.<!-- raw HTML omitted -->  — <em>New Product</em>: If a new product is added to the platform,
+how to predict the demand for it since we don’t have past sales data.<!-- raw HTML omitted -->  —
+<em>Seasonal</em>: Many products have demands varying with season. How to model
+that?!<!-- raw HTML omitted -->  — <em>Demand Spikes</em>: External events might trigger demand spikes which
+might not be directly modelled from previous sales data.<!-- raw HTML omitted -->  — <em>Regionalised</em>:
+Since the demand for different regions across the world differs drastically, how
+to incorporate these variations in the model.</li>
+<li><strong>Product Classification</strong>: Given a product description from a seller, map it to
+the appropriate product category. Amazon maintains a product category which is
+structured as a tree, and final categories lying in one of the leaf nodes.<!-- raw HTML omitted -->
+Challenges: <!-- raw HTML omitted -->  — <em>Scale</em> : Number of product categories are high, more than 1000. Classifying things into these many categories is gonna be a task.<!-- raw HTML omitted -->  —
+<em>Fuzzy Class definitions</em>: Often the product categories are fuzzy because the
+nature of products is so. <!-- raw HTML omitted -->  — <em>Multi-label and Multi-class</em>: Products might
+belong to more than one category. <!-- raw HTML omitted -->  — <em>Incorrect/Missing data</em>: The product
+description might have some missing values ( like the title). How to deal with
+those.<!-- raw HTML omitted -->  — <em>Product Vs Accessories:</em> It’s often hard to distinguish between
+the descriptions of a product and some of its accessories.<!-- raw HTML omitted -->  — <em>Training data
+quality</em>: Training data may be badly labelled, or often there are few products
+in the training data for a particular category.</li>
+<li><strong>Product Matching:</strong> Given product information, find duplicate product listings
+in the Amazon category. <!-- raw HTML omitted --> Challenges:<!-- raw HTML omitted -->  — <em>Scale</em>: The Amazon catalog
+contains 100+ million product listings. Looking for duplicates among these
+listings is gonna be challenging.<!-- raw HTML omitted -->  — <em>High precision requirement</em>: It’s very
+important that only the <em>same</em> products are listed as on listings. If not a
+hell-lot of problems are gonna happen, customer getting the wrong good for
+starters.<!-- raw HTML omitted -->  — <em>Incorrect/Missing Data</em>: Again, some of the descriptions might
+have missing inputs. The model should take care of these.<!-- raw HTML omitted -->  — <em>Variations</em>:
+Products might be subtly different, and they should be listed separately. The
+model should be able to take care of these small variations.</li>
+<li><strong>Product Search:</strong> This is probably the most important ML task at Amazon. Given
+a partial query, find the right product for the right customer, in the right
+place at the right time. This statement summarises any Information Retrieval
+task.</li>
+<li><strong>Ad-Click Probability:</strong> Predict the performance (click-through rates,
+conversion rate) of an ad. <!-- raw HTML omitted --> Challenges:<!-- raw HTML omitted -->  — <em>Sparsity of the training
+data</em>: Ad-Clicks are really rare (How many time do you click on an ad on any web
+page ?!). Hence the training data would be imbalanced towards no-clicks.<!-- raw HTML omitted -->  —
+<em>Latency</em>: The ads are placed according to their relevance and also by factoring
+in the real-time bidding that’s happening. Hence the prediction is to be done in
+a very short time, every time.<!-- raw HTML omitted -->  — <em>Explore and exploit</em>: The popular
+reinforcement learning paradigm is to be used here because the creatives are
+changing dynamically and customer interests keep changing.</li>
+<li><strong>Information Extraction From Reviews:</strong> Extract product attributes and ratings
+from reviews.<!-- raw HTML omitted --> Challenges: <!-- raw HTML omitted --> <em>— Diverse Product Attributes:</em> Since the
+products are diverse, so would the attributes. <em>—Informal Styles of the
+comments:</em> Often the comments are written in an informal style making it
+difficult to use conventional IR methods<!-- raw HTML omitted -->  — <em>Short Text</em>: Many of the
+comments are really short and extracting useful information might be difficult</li>
+<li><strong>Visual Search:</strong> Recognise products in an image and map it to the Amazon
+Catalog<!-- raw HTML omitted --> Challenges : <!-- raw HTML omitted -->  — *Detecting a product from the image:*The image
+to be searched would be of any kind, and detecting a specific product in that
+image would be challenging. <em>— Wide variety of products in the Amazon category:</em> Sifting through the Amazon catalog containing millions of images is also
+challenging.</li>
+<li><strong>Speech Recognition:</strong> With Alexa in the scene, this is a major use case for
+Amazon.<!-- raw HTML omitted --> Challenges: <!-- raw HTML omitted -->  — <em>Real-Time Recognition:</em> The speech is to be
+recognised and responded on the fly.** — *Unconstrained Environment*: Need to
+deal with the background noise<!-- raw HTML omitted -->  — *Speaker Adaptation*: Adapt and involve
+specific to the current user.<!-- raw HTML omitted -->  — S*peaker Independent*: Generalisability to
+new users<!-- raw HTML omitted -->  — *Word Error Rate*: Need to decrease the amount mistakes done in
+recognition because it impacts user experience</li>
+<li><strong>Deal Ranking:</strong> Rank Deals to maximise relevance or revenue* —
+Personalisation: *Personalised deals to be offered to users according to their
+past buying habits.*— Short-duration:*The deals run for a short time.
+Optimisation to be done considering that.</li>
+<li><strong>Question and Answering:</strong>  Answer user’s questions in any context — Echo,
+Mobile, Desktop, Apps etc<!-- raw HTML omitted -->  — <em>Complexity and Variability of the questions:</em> Open-ended <em>— Source of information:</em> It’s important to choose the right source
+of information to answer user queries — especially in the era of fake news!<!-- raw HTML omitted --> 
+<em>—High Precision and Recall:</em>— Variability in customer-created content:* The
+answers would differ from customer to customer, based on their history, buying
+habits, wish-lists, reminders etc.</li>
+</ol>
+</div>
+
+
+    </main>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-138746712-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

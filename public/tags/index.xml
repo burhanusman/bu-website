@@ -1,14 +1,33 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on Burhan Usman</title>
-    <link>http://example.org/tags/</link>
+    <link>https://www.burhanusman.com/tags/</link>
     <description>Recent content in Tags on Burhan Usman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Mon, 12 Aug 2019 14:09:17 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.burhanusman.com/tags/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>AI</title>
+      <link>https://www.burhanusman.com/tags/ai/</link>
+      <pubDate>Mon, 12 Aug 2019 14:09:17 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/tags/ai/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ML</title>
+      <link>https://www.burhanusman.com/tags/ml/</link>
+      <pubDate>Mon, 12 Aug 2019 14:09:17 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/tags/ml/</guid>
+      <description></description>
+    </item>
     
   </channel>
 </rss>

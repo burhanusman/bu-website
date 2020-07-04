@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on Burhan Usman</title>
+    <link>https://www.burhanusman.com/books/</link>
+    <description>Recent content in Books on Burhan Usman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Apr 2019 21:54:24 +0530</lastBuildDate>
+    
+	<atom:link href="https://www.burhanusman.com/books/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Booklist</title>
+      <link>https://www.burhanusman.com/books/booklist/</link>
+      <pubDate>Sat, 06 Apr 2019 21:54:24 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/books/booklist/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>

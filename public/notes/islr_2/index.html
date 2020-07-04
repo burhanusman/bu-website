@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; Burhan Usman</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/print.css" media="print">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/bucustom.css">
+  
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.burhanusman.com/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://www.burhanusman.com/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Burhan Usman" />
+
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://www.burhanusman.com/"><h1>Burhan Usman</h1></a>
+      <p class="lead">
+      An ML Enthusiast
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://www.burhanusman.com/">Home</a> </li>
+        <li><a href="https://www.burhanusman.com/blog/"> Blog </a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1></h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  <h1 id="islr-chapter-2">ISLR Chapter 2</h1>
+<h3 id="systematic-information-f">Systematic information f</h3>
+<p>If Y = f(X)+e, we say that f is a the systematic information that X provides about Y and e is the error term</p>
+<h3 id="why-estimate-f">Why estimate f</h3>
+<ul>
+<li>
+<p>Prediction : Y = ~f(X)
+Reducible Error: Estimating ~f so that it&rsquo;s closer to f
+Irreducible error: e cannot be predicted by X, hence we cannot reduce that</p>
+</li>
+<li>
+<p>Inference :</p>
+<ul>
+<li>Which predictors are associated with the response?</li>
+<li>What is the relationship between the response and each predictor?</li>
+<li>Can the relationship between Y and each predictor be adequately summarized
+using a linear equation, or is the relationship more complicated?</li>
+</ul>
+</li>
+</ul>
+<h2 id="how-to-estimate-f">How to Estimate f?</h2>
+<p>Parametric Methods: 
+It reduces the problem of estimating f down to one of estimating a set of parameters.</p>
+<ol>
+<li>First we assume a functional form or shape for f</li>
+<li>We fit the training data to that model and estimate the parameters.</li>
+</ol>
+<p>If the chosen model is too far from the true f, then our estimate will be poor. We could try fitting a more flexible model &ndash; with more parameters, but might lead to overfitting.
+Overfitting - the model follows the noise closely.</p>
+<p>Non-Parametric Methods:
+<strong>Advantage:</strong> By avoiding the assumption of a particular functional form for f, they have the potential
+to accurately fit a wider range of possible shapes for f.
+<strong>Disadvantage:</strong> since they do not reduce the problem of estimating f to a
+small number of parameters, a very large number of observations (far more
+than is typically needed for a parametric approach) is required in order to
+obtain an accurate estimate for f.</p>
+<h2 id="trade-off-between-model-accuracyflexibility-and-interpretability">Trade-Off between model accuracy(flexibility) and interpretability</h2>
+<p>The more flexible the approaches are, the less interpretable the become.
+Linear regression is more flexible than Lasso, where some co-efficients go to zero. But Lasso is more interpretable in the sense it has less coefficients.</p>
+<p>Semi-supervised Leaerning - n observations, m has response , n-m has no response labels
+<em>No free lunch</em> in statistics: no one method dominates all others over all
+possible data sets.</p>
+<h3 id="assessing-model-accuracy">Assessing Model Accuracy</h3>
+<h4 id="measuring-the-quality-of-the-fit">Measuring the quality of the fit</h4>
+<p>Regardless of whether or not overfitting has
+occurred, we almost always expect the training MSE to be smaller than
+the test MSE because most statistical learning methods either directly or
+indirectly seek to minimize the training MSE.
+Overfitting refers specifically to the case in which a less flexible model would have yielded a smaller test MSE.<br>
+Even if we don&rsquo;t change the flexibiltiy of a model, it can overfit right? Like a fixed NN. How do we explain that?</p>
+<h4 id="the-bias-variance-tradeoff">The Bias-Variance Tradeoff</h4>
+<p>expected test MSE, for a given value x0, can always be decomposed into the sum of three fundamental quantities:</p>
+<ol>
+<li>the variance of ˆ f(x0),</li>
+<li>the squared bias of ˆ f(x0) and</li>
+<li>the variance of the error variance terms</li>
+</ol>
+<p>As a general rule, as we use more flexible methods, the variance will
+increase and the bias will decrease. The relative rate of change of these
+two quantities determines whether the test MSE increases or decreases. As
+we increase the flexibility of a class of methods, the bias tends to initially
+decrease faster than the variance increases. Consequently, the expected
+test MSE declines. However, at some point increasing flexibility has little
+impact on the bias but starts to significantly increase the variance. When
+this happens the test MSE increases.</p>
+<h4 id="model-accuracy-in-classification-settings">Model Accuracy in classification settings</h4>
+<p><strong>The Bayes Classifier:</strong> Classifier that assigns each observation to the most likely class,
+given its predictor values.
+The Bayes classifier produces the lowest possible test error rate, called
+the Bayes error rate.
+the error rate at X = x0 will be 1−(maxj Pr(Y=j|X = x0))
+The Bayes error rate is analogous to the irreducible error</p>
+<p>K-Nearest Classifier:
+For real data, we do not know the conditional distribution of Y given X, and so computing the Bayes classifier is impossible.</p>
+<p>Many approaches attempt to estimate the conditional distribution of Y given X, and then classify a given observation to the class with highest <em>estimated</em> probability.</p>
+<p>Given a positive in-
+K-nearest
+teger K and a test observation x0, the KNN classifier first identifies the neighbors
+K points in the training data that are closest to x0, represented by N0.
+It then estimates the conditional probability for class j as the fraction of
+points in N0 whose response values equal j:
+Formula</p>
+<p><strong>Choice of k:</strong><br>
+k=1 : Highly flexible model, learns all the noise.
+k=100 : Very conventional model
+K decides the flexibility of the model</p>
+<p>Flexibilty vs Test Error - U-shape graph
+Flexibiliy vs Train Error - Ever decreasing graph
+Flexibility vs Interpretability - incverse relationship</p>
+
+</div>
+
+
+    </main>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-138746712-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

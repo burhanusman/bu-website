@@ -1,32 +1,185 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Burhan Usman</title>
-    <link>http://example.org/</link>
+    <link>https://www.burhanusman.com/</link>
     <description>Recent content on Burhan Usman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 06 Apr 2019 14:53:47 +0530</lastBuildDate>
+    <lastBuildDate>Mon, 12 Aug 2019 14:09:17 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.burhanusman.com/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Blog</title>
-      <link>http://example.org/notes/probability/bayes/new/</link>
-      <pubDate>Sat, 06 Apr 2019 14:53:47 +0530</pubDate>
+      <title>BatchNorm</title>
+      <link>https://www.burhanusman.com/blog/batchnorm/</link>
+      <pubDate>Mon, 12 Aug 2019 14:09:17 +0530</pubDate>
       
-      <guid>http://example.org/notes/probability/bayes/new/</guid>
-      <description>A List of Blogs</description>
+      <guid>https://www.burhanusman.com/blog/batchnorm/</guid>
+      <description>I had a hard time wrapping my head around on why BatchNorm was used until I read &amp;lsquo;deeply&amp;rsquo; about it. I&amp;rsquo;ll try explaining the concept and the reason why it works.
+Normalization and Standardization in machine learning Although Normalization and standardization are often used interchangeably, it&amp;rsquo;s good to know the difference between them.
+ Normalization: Normalization means to scale a variable to have a values between 0 and 1 Standardization: Standardization transforms data to have a mean of zero and a standard deviation of 1</description>
+    </item>
+    
+    <item>
+      <title>Notes from Karpathy&#39;s Article on training NNs</title>
+      <link>https://www.burhanusman.com/notes/deeplearning/recipe_karpathy/</link>
+      <pubDate>Fri, 26 Apr 2019 21:54:24 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/deeplearning/recipe_karpathy/</guid>
+      <description>Two Observations he make:  Neural network training is tough and cannot be easily abstracted A lot of things can wrong go while training a nueral network   Now, suffering is a perfectly natural part of getting a neural network to work well, but it can be mitigated by being thorough, defensive, paranoid, and obsessed with visualizations of basically every possible thing.
+ The recipe:  If writing your neural net code was like training one, you’d want to use a very small learning rate and guess and then evaluate the full test set after every iteration.</description>
+    </item>
+    
+    <item>
+      <title>Plotting a Normal Curve</title>
+      <link>https://www.burhanusman.com/notes/statistics/plotting_a_normal_curve/</link>
+      <pubDate>Fri, 26 Apr 2019 21:54:24 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/statistics/plotting_a_normal_curve/</guid>
+      <description>Plotting a Normal Curve from scipy.stats import norm import matplotlib.pyplot as plt import numpy as np import seaborn as sns %matplotlib inline A full normal curve cannot be plotted because it ranges from -inf to inf. We&amp;rsquo;ll plot a curve which covers 98% of the density. A normal(univariate) curve is defined by two parameters, mean and sigma. We find ppf(0.01) and ppf(0.99) then generate equallt spaced points between those.
+ The percent point function (ppf) is the inverse of the cumulative distribution function.</description>
+    </item>
+    
+    <item>
+      <title>Universal Sentence Encoder</title>
+      <link>https://www.burhanusman.com/notes/nlp/universal_sentence_encoder_for_text_similarity/</link>
+      <pubDate>Fri, 26 Apr 2019 21:54:24 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/nlp/universal_sentence_encoder_for_text_similarity/</guid>
+      <description>import tensorflow_hub as hub from sklearn.metrics.pairwise import cosine_similarity import seaborn as sns import numpy as np /usr/local/lib/python3.6/dist-packages/statsmodels/tools/_testing.py:19: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.import pandas.util.testing as tm Loading the universal sentence encoder The USE model can be downloaded from TF-Hub. In Tensorflow 2, the model is in eager execution mode, hence the embeddings can be easily obtained.
+module_url = &amp;#34;https://tfhub.dev/google/universal-sentence-encoder/4&amp;#34; #@param [&amp;#34;https://tfhub.</description>
+    </item>
+    
+    <item>
+      <title>Booklist</title>
+      <link>https://www.burhanusman.com/books/booklist/</link>
+      <pubDate>Sat, 06 Apr 2019 21:54:24 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/books/booklist/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Pytorch Toy Classification</title>
+      <link>https://www.burhanusman.com/notes/deeplearning/toy-classification-pytorch/</link>
+      <pubDate>Sat, 06 Apr 2019 21:54:24 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/deeplearning/toy-classification-pytorch/</guid>
+      <description>Making a one-hidden layer neural network with pytorch Importing the required libraries import numpy as np from sklearn.model_selection import train_test_split from sklearn.datasets import make_moons from sklearn.metrics import accuracy_score, precision_score, recall_score import matplotlib.pyplot as plt import seaborn as sns import torch import torch.nn as nn import torch.nn.functional as F from torch.autograd import Variable from torch.distributions import constraints Making a toy dataset We use the make moons dataset from Scikit-Learn
+X, Y = make_moons(noise=0.</description>
+    </item>
+    
+    <item>
+      <title>Tag Feature Extraction</title>
+      <link>https://www.burhanusman.com/notes/feature-engineering/tag-feature-extraction/</link>
+      <pubDate>Sat, 06 Apr 2019 21:54:24 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/feature-engineering/tag-feature-extraction/</guid>
+      <description>Converting tags into features This note is about converting a set of tags in each item to a set of features
+import pandas as pd import numpy as np from sklearn.feature_extraction.text import CountVectorizer train=pd.read_excel(&amp;#34;data/Participants_Data_Final/Data_Train.xlsx&amp;#34;) test=pd.read_excel(&amp;#34;data/Participants_Data_Final/Data_Test.xlsx&amp;#34;) train.head() .dataframe tbody tr th {vertical-align: top;}.dataframe thead th {text-align: right;} We&amp;rsquo;ll be dealing with the cuisines column which has different cuisines corresponding restaurant We&amp;rsquo;ll take a look at train and test cuisines separately to see if there are more cusines in test</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning at Amazon</title>
+      <link>https://www.burhanusman.com/blog/amazon_talk/</link>
+      <pubDate>Sat, 06 Apr 2019 14:09:17 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/blog/amazon_talk/</guid>
+      <description>&lt;p&gt;Recently I attended a talk by Mr Part Gupta, an ML engineer at Amazon. It was
+mostly about the Machine Learning use cases at Amazon. The talk was quite
+informative as I had attended few courses on Machine Learning and Information
+Retrieval. This post is a summary of the talk.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Zappos Footwear Classification</title>
+      <link>https://www.burhanusman.com/blog/zappos/</link>
+      <pubDate>Sat, 06 Apr 2019 14:09:17 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/blog/zappos/</guid>
+      <description>Recently I stumbled across the well labelled Zappos50K dataset and realised a lot of interesting use cases can be built with it. I decided to start with a simple binary classification model to classify footwear on the basis of gender.
+The Setup I have used the Google Colab to do all the coding. You can easily try it yourself. For starters you would need to download the dataset from Univ. of Texas website.</description>
     </item>
     
     <item>
       <title></title>
-      <link>http://example.org/notes/statistics/plotting/</link>
+      <link>https://www.burhanusman.com/notes/deeplearning/pytorch_notes/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/notes/statistics/plotting/</guid>
-      <description> Plotting a Normal Curve from scipy.stats import norm import matplotlib.pyplot as plt %matplotlib inlinedef plot_normal(mu,sigma): f,ax=plt.subplots() x=np.linspace(norm.ppf(0.01,mu,sigma),norm.ppf(0.99,mu,sigma),100) ax.plot(x, norm.pdf(x,mu,sigma), &amp;#39;r-&amp;#39;, lw=5, alpha=0.6, label=&amp;#39;norm pdf&amp;#39;) return axplot_normal(0,1) &amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x1bca95a2320&amp;gt;  </description>
+      <guid>https://www.burhanusman.com/notes/deeplearning/pytorch_notes/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/islr_2/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/islr_2/</guid>
+      <description>ISLR Chapter 2 Systematic information f If Y = f(X)+e, we say that f is a the systematic information that X provides about Y and e is the error term
+Why estimate f   Prediction : Y = ~f(X) Reducible Error: Estimating ~f so that it&amp;rsquo;s closer to f Irreducible error: e cannot be predicted by X, hence we cannot reduce that
+  Inference :
+ Which predictors are associated with the response?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/islr_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/islr_3/</guid>
+      <description>Linear Regression Simple Linear Regression  Minimizes residual sum of squares (RSS) - equivalent to minimizing RMSE Popultaion regression line is un observed -it&amp;rsquo;s the true model. True model + e gives at the whole popultaion What we can estimate is the least square regression line with the given data. The concept is analogous to popuation mean and sample mean. Least square estimates are unbiased. Proof? We can also compute the standard errors of the estimates.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/islr_4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/islr_4/</guid>
+      <description>Logistic Regresion Why don&amp;rsquo;t we directly use linear regression MLE Estiamte For more than two classes?
+Linear Discriminant Analysis Why LDA apart from Logistic Regression?  When classes are well separated, the parameter estimates for the logistic regression are unstable. If n is small and X is normal for each class, LDA is more stable Popular for more than two classes  Why is it Linear? Guassian Assumption with shared coovariance across classes</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/islr_5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/islr_5/</guid>
+      <description>Resampling Methods Model assesment and model selection - the process of evaluating a model&amp;rsquo;s performance is model assesment and the process of selecting the proper level of flexibility for a model is model selection.
+  The bootstrap is used in several contexts, most commonly model to provide a measure of accuracy of a parameter estimate or of a given selection statistical learning method.
+    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/islr_8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/islr_8/</guid>
+      <description>#Tree Based Methods
+  Basically stratifying or segmenting the predictor space into a number of simple regions. In order to make a prediction for a given observation, we typically use the mean or the mode of the training observations in the region to which it belongs.
+  Since the set of splitting rules used to segment the predictor space can be summarized in a tree, these types of approaches are known as decision tree methods.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/temp/vue_tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/temp/vue_tutorial/</guid>
+      <description>Key Terms   v-model: binds data to inpit
+  v-bind: shorthand (:) - binds attributes to elements
+  double mustache- v-text
+  v-html - renders the html
+  v-once - update only once
+  v-for - {{cat}}  v-on shortcut(@)- for functions on buttons addkitty funcition v-on:keyup.enter=&amp;quot;addKitty&amp;rdquo;
+  filters {{cat | capitalize}}
+  Vue.Component({ props: templates })
+  Vue Lifecycle functions</description>
     </item>
     
   </channel>

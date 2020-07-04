@@ -1,0 +1,15 @@
+.card-body {
+-webkit-columns: 384px 2;
+  -moz-columns: 384px 2;
+      columns: 384px 2;
+}
+
+.subtitle {
+    color: #999;
+    font-size: 21px;
+    font-family: medium-content-sans-serif-font,"Lucida Grande","Lucida Sans Unicode","Lucida Sans",Geneva,Arial,sans-serif;
+}
+
+.content.container.index-page{
+	padding: 1rem 1rem 0rem
+}

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; Burhan Usman</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/print.css" media="print">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/bucustom.css">
+  
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.burhanusman.com/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://www.burhanusman.com/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Burhan Usman" />
+
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://www.burhanusman.com/"><h1>Burhan Usman</h1></a>
+      <p class="lead">
+      An ML Enthusiast
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://www.burhanusman.com/">Home</a> </li>
+        <li><a href="https://www.burhanusman.com/blog/"> Blog </a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1></h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  <h1 id="linear-regression">Linear Regression</h1>
+<h2 id="simple-linear-regression">Simple Linear Regression</h2>
+<ul>
+<li>Minimizes residual sum of squares (RSS) - equivalent to minimizing RMSE</li>
+<li>Popultaion regression line is un observed -it&rsquo;s the true model. True model + e gives at the whole popultaion</li>
+<li>What we can estimate is the least square regression line with the given data.</li>
+<li>The concept is analogous to popuation mean and sample mean.</li>
+<li>Least square estimates are unbiased. Proof?</li>
+<li>We can also compute the standard errors of the estimates.</li>
+<li>The etimates</li>
+</ul>
+<h3 id="assessing-the-accuracy-of-the-coefficient">Assessing the accuracy of the coefficient</h3>
+<ol>
+<li>We estimate the coefficient using least square criteria.</li>
+<li>The estiamtes are unbiased</li>
+<li>We estiamte the standard errors - for that we need to estiamte the variance of the error-term</li>
+<li>We do a hypothesis test</li>
+</ol>
+<h3 id="assessing-the-accuracy-of-the-model">Assessing the accuracy of the model</h3>
+<h4 id="residual-standard-errorrse">Residual Standard Error(RSE):</h4>
+<p>Even if we knew the true regression line, we would not be
+able to perfectly predict Y from X. The RSE is an estimate of the standard deviation of . Roughly speaking, it is the average amount that the response
+will deviate from the true regression line.</p>
+<p><!-- raw HTML omitted -->\begin{equation}
+\mathrm{RSE}=\sqrt{\frac{1}{n-2} \mathrm{RSS}}=\sqrt{\frac{1}{n-2} \sum_{i=1}^{n}\left(y_{i}-\hat{y}_{i}\right)^{2}}
+\end{equation}<!-- raw HTML omitted --></p>
+<h4 id="r2-statistic">R2 statistic</h4>
+<h2 id="mutiple-linear-regression">Mutiple Linear Regression</h2>
+<h2 id="potenitial-problems">Potenitial Problems</h2>
+<ol>
+<li>
+<p>Non-linearity of the response-predictor relationships.</p>
+<ul>
+<li>Use Residual plots to identify non linearity</li>
+<li>Do non-linear transformations</li>
+</ul>
+</li>
+<li>
+<p>Correlation of error terms.</p>
+<ul>
+<li>The standard errors that are computed for the estimated regression coefficients or the fitted values are based on the assumption of uncorrelated error terms. If in fact there
+is correlation among the error terms, then the estimated standard errors
+will tend to underestimate the true standard errors.</li>
+</ul>
+</li>
+<li>
+<p>Non-constant variance of error terms.</p>
+</li>
+</ol>
+<ul>
+<li>Heteroscadacity</li>
+<li>Weighted Least Squares</li>
+</ul>
+<ol start="4">
+<li>Outliers.</li>
+</ol>
+<ul>
+<li>An outlier is a point for which yi is far from the value predicted by the model. Outliers can arise for a variety of reasons, such as incorrect recording</li>
+<li><strong>studentized residuals:</strong> computed by dividing each residual ei by its estimated standard
+studentized
+error
+of an observation during data collection.</li>
+</ul>
+<ol start="5">
+<li>High-leverage points.</li>
+</ol>
+<ul>
+<li>observations with high leverage high leverage have an unusual value for xi</li>
+<li>changes the slope drastically</li>
+<li>In order to quantify an observation’s leverage, we compute the leverage statistic. A large value of this statistic indicates an observation with high leverage.</li>
+<li>The leverage statistic hi is always
+between 1/n and 1, and the average leverage for all the observations is
+always equal to (p+1)/n. So if a given observation has a leverage statistic that greatly exceeds (p+1)/n, then we may suspect that the corresponding
+point has high leverage.</li>
+<li></li>
+</ul>
+<ol start="6">
+<li>Collinearity.</li>
+</ol>
+<ul>
+<li>Collinearity refers to the situation in which two or more predictor variables are closely related to one another.</li>
+<li>Two-way collinearity can be detected by a correlation plot but it cannot detect multicollinearity</li>
+<li>Multicollinearity: Can be detected by calculating VIF</li>
+<li>Variation Inflation Factor:</li>
+</ul>
+
+</div>
+
+
+    </main>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-138746712-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

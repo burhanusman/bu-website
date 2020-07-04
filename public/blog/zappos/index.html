@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Zappos Footwear Classification &middot; Burhan Usman</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/print.css" media="print">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/bucustom.css">
+  
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.burhanusman.com/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://www.burhanusman.com/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Burhan Usman" />
+
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://www.burhanusman.com/"><h1>Burhan Usman</h1></a>
+      <p class="lead">
+      An ML Enthusiast
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://www.burhanusman.com/">Home</a> </li>
+        <li><a href="https://www.burhanusman.com/blog/"> Blog </a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Zappos Footwear Classification</h1>
+  <p class="subtitle">How I built a simple ML system to do gender based footwear classification.</p>
+  <time datetime=2019-04-06T14:09:17&#43;0530 class="post-date">Sat, Apr 6, 2019</time>
+  <p>Recently I stumbled across the well labelled Zappos50K dataset and realised a lot of interesting use cases can be built with it. I decided to start with a simple binary classification model to classify footwear on the basis of gender.</p>
+<h3 id="the-setup">The Setup</h3>
+<p>I have used the Google Colab to do all the coding. You can easily try it yourself. For starters you would need to download the dataset from Univ. of Texas website.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Downloading and extracting the dataset</span>
+<span class="err">!</span><span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">vision</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">utexas</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">finegrained</span><span class="o">/</span><span class="n">utzap50k</span><span class="o">/</span><span class="n">ut</span><span class="o">-</span><span class="n">zap50k</span><span class="o">-</span><span class="n">images</span><span class="o">-</span><span class="n">square</span><span class="o">.</span><span class="n">zip</span>
+<span class="err">!</span><span class="n">wget</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">vision</span><span class="o">.</span><span class="n">cs</span><span class="o">.</span><span class="n">utexas</span><span class="o">.</span><span class="n">edu</span><span class="o">/</span><span class="n">projects</span><span class="o">/</span><span class="n">finegrained</span><span class="o">/</span><span class="n">utzap50k</span><span class="o">/</span><span class="n">ut</span><span class="o">-</span><span class="n">zap50k</span><span class="o">-</span><span class="n">data</span><span class="o">.</span><span class="n">zip</span>
+<span class="err">!</span><span class="n">unzip</span> <span class="n">ut</span><span class="o">-</span><span class="n">zap50k</span><span class="o">-</span><span class="n">images</span><span class="o">-</span><span class="n">square</span><span class="o">.</span><span class="n">zip</span>
+<span class="err">!</span><span class="n">unzip</span> <span class="n">ut</span><span class="o">-</span><span class="n">zap50k</span><span class="o">-</span><span class="n">data</span><span class="o">.</span><span class="n">zip</span>
+</code></pre></div><p>We’ll be using the easy-to-use <em>fastai</em> library to train and test the models. Colab has the library already installed in it. Below we’ll just import all the required libraries.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="c1">#Importing the required libraries</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">mat4py</span>   <span class="c1">#For reading the .mat files in the dataset</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
+<span class="kn">import</span> <span class="nn">mat4py</span>
+<span class="kn">from</span> <span class="nn">fastai.vision</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">fastai.metrics</span> <span class="kn">import</span> <span class="n">error_rate</span>
+</code></pre></div><p>Now we’ll need to arrange the data in a way suitable for training. The image-data.csv file contains the properties of each image like gender and brand. The image-path.mat file contains the relative path of all the images. For starter’s we’ll combine both the dataframe into one.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">image_paths</span> <span class="o">=</span> <span class="n">mat4py</span><span class="o">.</span><span class="n">loadmat</span><span class="p">(</span><span class="s2">&#34;ut-zap50k-data/image-path.mat&#34;</span><span class="p">)</span>
+<span class="n">image_path</span><span class="o">=</span><span class="p">[</span><span class="n">i</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">image_paths</span><span class="p">[</span><span class="s2">&#34;imagepath&#34;</span><span class="p">]]</span>
+<span class="n">meta_data</span><span class="o">=</span><span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&#34;ut-zap50k-data/meta-data.csv&#34;</span><span class="p">)</span>
+<span class="n">meta_data</span><span class="p">[</span><span class="s2">&#34;path&#34;</span><span class="p">]</span><span class="o">=</span><span class="n">image_path</span>
+</code></pre></div><p>Since we are making a footwear classifier based on gender, we just need the following information: Given an image which gender does it belong to.
+Also for simplification, we only take those images that are belong to either of the gender. That is, we drop all rows in which the Gender column is Boys/Girls/Unisexual etc.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">meta_data_clean</span><span class="o">=</span><span class="n">meta_data</span><span class="p">[</span><span class="o">-</span><span class="n">meta_data</span><span class="o">.</span><span class="n">Gender</span><span class="o">.</span><span class="n">isna</span><span class="p">()]</span>
+<span class="n">meta_data_clean</span><span class="o">=</span><span class="n">meta_data_clean</span><span class="p">[(</span><span class="n">meta_data_clean</span><span class="o">.</span><span class="n">Gender</span><span class="o">==</span><span class="s2">&#34;Women&#34;</span><span class="p">)</span> <span class="o">|</span> <span class="p">(</span><span class="n">meta_data_clean</span><span class="o">.</span><span class="n">Gender</span><span class="o">==</span><span class="s2">&#34;Men&#34;</span><span class="p">)]</span>
+<span class="n">meta_data_clean</span><span class="o">=</span><span class="n">meta_data_clean</span><span class="p">[[</span><span class="s2">&#34;path&#34;</span><span class="p">,</span><span class="s2">&#34;Gender&#34;</span><span class="p">]]</span>
+</code></pre></div><p>There are folder names with ends with a period(.) and we need to do some cleaning for those path variables. We’ll replace the period(.) with 2%E — that’s how linux saves these file names.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">meta_data_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">meta_data_clean</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&#34;./&#34;</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="bp">False</span><span class="p">),</span><span class="s2">&#34;path&#34;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&#34;./&#34;</span><span class="p">,</span><span class="s2">&#34;</span><span class="si">%2E</span><span class="s2">/&#34;</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">meta_data_clean</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">meta_data_clean</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">contains</span><span class="p">(</span><span class="s2">&#34;./&#34;</span><span class="p">,</span><span class="n">regex</span><span class="o">=</span><span class="bp">False</span><span class="p">),</span><span class="s2">&#34;path&#34;</span><span class="p">]]</span>
+</code></pre></div><p>Now we are all set to do the training. This is what we have currently:</p>
+<ol>
+<li>A bunch of images of footwear belonging to either of the gender.</li>
+<li>A data-frame with two columns — the path to an image and it’s corresponding label.</li>
+</ol>
+<p>We’ll go with the standard way of using the fastai library.We’ll create an ImageDataBunch object from the dataframe. This splits the dataset into train and validation sets. The path specifies the root path where all the images are saved. The df specifies the dataframe holding the relative paths to the images and the corresponding labels. The size parameter refers to the input size of the images. And the bs refers to the batch-size.</p>
+<blockquote>
+<p><strong>Why do we need to specify the image size and batch size?</strong><br>
+<em>Few things to understand here. If you are using the network architecture as a whole it would only take a fixed size of images. This is because there is a fully connected convolutional layer in between which has a fixed size of in-nodes. But that’s not the case with convolution or pooling layers, they can work on arbitrary size of inputs.<br>
+Here, we are only taking the head of the network which consist of only conv and pooling layers. So the network can take and fixed size of images. The ImageDataBunch object is a data-loader and it would cut/expand the images to the given size.<br>
+Batchsize is the parameter which decides how many images to be processed at once by the network. The system usually have memory constraints and it’s this parameter that we need to change when it says the system is out of memory.</em></p>
+</blockquote>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">data</span><span class="o">=</span><span class="n">ImageDataBunch</span><span class="o">.</span><span class="n">from_df</span><span class="p">(</span><span class="n">path</span><span class="o">=</span><span class="s2">&#34;ut-zap50k-images-square/&#34;</span><span class="p">,</span><span class="n">df</span><span class="o">=</span><span class="n">meta_data_clean</span><span class="p">,</span> <span class="n">size</span><span class="o">=</span><span class="mi">224</span><span class="p">,</span><span class="n">bs</span><span class="o">=</span><span class="mi">64</span><span class="p">)</span>
+</code></pre></div><p>Now we have the data in the required format, we instantiate a cnn-model. We need to specify which particular architecture we need to use. We’ll use the Resnet50 architecture. Do read this article if you want to learn about the architecture in depth.</p>
+<div class="highlight"><pre class="chroma"><code class="language-python" data-lang="python"><span class="n">learn</span> <span class="o">=</span> <span class="n">create_cnn</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">models</span><span class="o">.</span><span class="n">resnet50</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">error_rate</span><span class="p">)</span>
+</code></pre></div><blockquote>
+<p><strong>A primer for newbies on transfer learning</strong><br>
+<em>We are using something called transfer learning here. We already have a network which was trained on huge amount of data — Resnet50 in the above case. We use the same network architecture along with the trained weights — so that we have something to start with. The idea is that it has learned to recognize many features on all of this data, and that we will benefit from this knowledge, especially if our dataset is small, compared to starting from a randomly initialized model . We train the model on the current dataset and hopefully the weights are updated in a way customised for performing well on the task at hand.</em></p>
+</blockquote>
+<h3 id="learning-rate-finder">Learning Rate Finder</h3>
+<p>This is something which is to be done before we start training the neural network. We need to find the optimum range of learning rate for training. Learning rate is a parameter in a neural network optimization algorithm which decides how fast or slow the gradient decent happens.</p>
+<blockquote>
+<p>Most of the techniques used by fastai come from the paper Cyclical Learning Rates for Training Neural Networks by Leslie N. Smith. It’s a short and fun read, I’ll urge you to read it for a better understanding.The major theme of the paper is that instead of a keeping a fixed learning rate, we vary the learning rate between a max/min value cyclically. The paper also explains how to find the min and max values for the cycles. That’s done by linearly increasing the learning rate from a min value to a max value, plotting it and picking the range where the learning rate leads to less loss.</p>
+</blockquote>
+<script type="application/javascript" src="https://gist.github.com/burhanusman/26bfc105a38f6a6fcdbad38f6202ce53.js"></script>
+
+<p>We also need to unfreeze the network. What it means is that we are gonna make all the layer weights updatable. If not, only the head of the network is trainable. We use the one cycle policy where we change the learning rate for one cycle (two steps, an increasing one and a decreasing one). We calculate the validation rate and the error rate.</p>
+<script type="application/javascript" src="https://gist.github.com/burhanusman/1f2812076533577f3e89f732b04704f8.js"></script>
+
+<p>We are done with the training and we have a neural network that can identify footwear with an 8.7% error rate. Not bad. In fact if you look at some of those images that the network got wrong, we see that it’s not even easy for a human being to accurately predict those. Some are borderline differences, some probably had their manual labelling wrong, and some are very rare types of designs. We plot few of the images that the network got wrong here.</p>
+<script type="application/javascript" src="https://gist.github.com/burhanusman/7e762b9caa1f66adceb723b52353475a.js"></script>
+
+<p>It’s interesting to see that the network is biased by color. Pink shoes are often misclassified as belonging to men, when it’s not. This is a part of the major discussion on how to avoid biases in AI systems.</p>
+<h3 id="what-next">What Next?</h3>
+<p>There are a lot of other interesting things that can be done with this dataset. I intend to do some of them in the near future like similarity prediction, recommender system and attribute classification.</p>
+
+</div>
+
+
+    </main>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-138746712-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

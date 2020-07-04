@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Notes from Karpathy&#39;s Article on training NNs &middot; Burhan Usman</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/print.css" media="print">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/bucustom.css">
+  
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.burhanusman.com/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://www.burhanusman.com/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Burhan Usman" />
+
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://www.burhanusman.com/"><h1>Burhan Usman</h1></a>
+      <p class="lead">
+      An ML Enthusiast
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://www.burhanusman.com/">Home</a> </li>
+        <li><a href="https://www.burhanusman.com/blog/"> Blog </a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1>Notes from Karpathy&#39;s Article on training NNs</h1>
+  <time datetime=2019-04-26T21:54:24&#43;0530 class="post-date">Fri, Apr 26, 2019</time>
+  <h3 id="two-observations-he-make">Two Observations he make:</h3>
+<ol>
+<li>Neural network training is tough and cannot be easily abstracted</li>
+<li>A lot of things can wrong go while training a nueral network</li>
+</ol>
+<blockquote>
+<p>Now, suffering is a perfectly natural part of getting a neural network to work well, but it can be mitigated by being thorough, defensive, paranoid, and obsessed with visualizations of basically every possible thing.</p>
+</blockquote>
+<h3 id="the-recipe">The recipe:</h3>
+<blockquote>
+<p>If writing your neural net code was like training one, you’d want to use a very small learning rate and guess and then evaluate the full test set after every iteration.</p>
+</blockquote>
+<ol>
+<li>
+<p>Study the data well. Look for imbalances and biases, variation and noise. Filter and Search by labels and find any outliers in the data.</p>
+</li>
+<li>
+<p>Set up a full training + evaluation skeleton and gain trust in its correctness via a series of experiments.  Train it, visualize the losses, any other metrics (e.g. accuracy), model predictions, and perform a series of ablation experiments with explicit hypotheses along the way.</p>
+<ul>
+<li>Fix Random Seeds</li>
+<li>No data augmentation at this stage</li>
+<li>verify loss @ init.: If you initialize your final layer correctly you should measure</li>
+<li>log(1/n_classes) on a softmax at initialization.</li>
+<li>set the bias well while inilization to avoid &ldquo;hockey stick curves&rdquo;</li>
+<li>check with human baseline</li>
+<li>input*independent baseline * train data with all zeros</li>
+<li>overfit one batch and achieve minimum possible loss adding more layers and filters</li>
+<li>verify decreasing loss by increasing the capacity</li>
+<li>visualize after all the preprocessing</li>
+<li>visualize prediction on test data, and get clues from it&rsquo;s dynamics</li>
+<li>set manual loss and backprop to see the dependencies and see if everthing is in place</li>
+</ul>
+</li>
+<li>
+<p>Getting the right model has two stages:</p>
+<ul>
+<li>get a model large enough that it can overfit (i.e. focus on training loss)</li>
+<li>regularize it appropriately (give up some training loss to improve the validation loss</li>
+<li>pick the simpleset model</li>
+<li>use adam for optimizing</li>
+<li>complexify only one at a time</li>
+<li>do not trust learning rate decay defaults</li>
+</ul>
+</li>
+<li>
+<p>Regularize</p>
+<ul>
+<li>Get more data</li>
+<li>data augmentation</li>
+<li>creative augmentation  fake data</li>
+<li>pretrain</li>
+<li>stick with supervised learning</li>
+<li>remove features with noise, try smaller images</li>
+<li>smaller model size, replace fully connected layers with pooling layers</li>
+<li>decrease batch size because it increase regularization</li>
+<li>Use dropout</li>
+<li>Increase wait decay</li>
+<li>early stopping</li>
+<li>try a larger model</li>
+<li>Visualise first layer weights and make sure you are getting edges</li>
+</ul>
+</li>
+</ol>
+
+</div>
+
+
+    </main>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-138746712-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

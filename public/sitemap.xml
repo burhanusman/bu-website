@@ -1,48 +1,146 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/blog/</loc>
+    <loc>https://www.burhanusman.com/</loc>
+    <lastmod>2019-08-12T14:09:17+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/tags/ai/</loc>
+    <lastmod>2019-08-12T14:09:17+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/blog/batchnorm/</loc>
+    <lastmod>2019-08-12T14:09:17+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/tags/ml/</loc>
+    <lastmod>2019-08-12T14:09:17+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/tags/</loc>
+    <lastmod>2019-08-12T14:09:17+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/deeplearning/recipe_karpathy/</loc>
+    <lastmod>2019-04-26T21:54:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/statistics/plotting_a_normal_curve/</loc>
+    <lastmod>2019-04-26T21:54:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/nlp/universal_sentence_encoder_for_text_similarity/</loc>
+    <lastmod>2019-04-26T21:54:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/books/booklist/</loc>
+    <lastmod>2019-04-06T21:54:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/books/</loc>
+    <lastmod>2019-04-06T21:54:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/deeplearning/toy-classification-pytorch/</loc>
+    <lastmod>2019-04-06T21:54:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/feature-engineering/tag-feature-extraction/</loc>
+    <lastmod>2019-04-06T21:54:24+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/blog/</loc>
     <lastmod>2019-04-06T14:53:47+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/notes/deeplearning/</loc>
+    <loc>https://www.burhanusman.com/notes/deeplearning/</loc>
     <lastmod>2019-04-06T14:53:47+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/notes/probability/bayes/new/</loc>
+    <loc>https://www.burhanusman.com/notes/feature-engineering/</loc>
     <lastmod>2019-04-06T14:53:47+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/notes/probability/</loc>
+    <loc>https://www.burhanusman.com/notes/nlp/</loc>
     <lastmod>2019-04-06T14:53:47+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>https://www.burhanusman.com/notes/</loc>
     <lastmod>2019-04-06T14:53:47+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/notes/statistics/plotting/</loc>
+    <loc>https://www.burhanusman.com/notes/probability/</loc>
+    <lastmod>2019-04-06T14:53:47+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/notes/</loc>
+    <loc>https://www.burhanusman.com/notes/statistics/</loc>
+    <lastmod>2019-04-06T14:53:47+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
-    <priority>0</priority>
+    <loc>https://www.burhanusman.com/blog/amazon_talk/</loc>
+    <lastmod>2019-04-06T14:09:17+05:30</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
-    <priority>0</priority>
+    <loc>https://www.burhanusman.com/blog/zappos/</loc>
+    <lastmod>2019-04-06T14:09:17+05:30</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/deeplearning/pytorch_notes/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/islr_2/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/islr_3/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/islr_4/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/islr_5/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/islr_8/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/notes/temp/vue_tutorial/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/categories/</loc>
+  </url>
+  
+  <url>
+    <loc>https://www.burhanusman.com/projects/</loc>
   </url>
   
 </urlset>

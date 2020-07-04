@@ -1,22 +1,84 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Burhan Usman</title>
-    <link>http://example.org/notes/</link>
-    <description>Recent content on Burhan Usman</description>
+    <title>Notes on Burhan Usman</title>
+    <link>https://www.burhanusman.com/notes/</link>
+    <description>Recent content in Notes on Burhan Usman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <lastBuildDate>Sat, 06 Apr 2019 14:53:47 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/notes/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.burhanusman.com/notes/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title></title>
-      <link>http://example.org/notes/statistics/plotting/</link>
+      <link>https://www.burhanusman.com/notes/islr_2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>http://example.org/notes/statistics/plotting/</guid>
-      <description> Plotting a Normal Curve from scipy.stats import norm import matplotlib.pyplot as plt %matplotlib inlinedef plot_normal(mu,sigma): f,ax=plt.subplots() x=np.linspace(norm.ppf(0.01,mu,sigma),norm.ppf(0.99,mu,sigma),100) ax.plot(x, norm.pdf(x,mu,sigma), &amp;#39;r-&amp;#39;, lw=5, alpha=0.6, label=&amp;#39;norm pdf&amp;#39;) return axplot_normal(0,1) &amp;lt;matplotlib.axes._subplots.AxesSubplot at 0x1bca95a2320&amp;gt;  </description>
+      <guid>https://www.burhanusman.com/notes/islr_2/</guid>
+      <description>ISLR Chapter 2 Systematic information f If Y = f(X)+e, we say that f is a the systematic information that X provides about Y and e is the error term
+Why estimate f   Prediction : Y = ~f(X) Reducible Error: Estimating ~f so that it&amp;rsquo;s closer to f Irreducible error: e cannot be predicted by X, hence we cannot reduce that
+  Inference :
+ Which predictors are associated with the response?</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/islr_3/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/islr_3/</guid>
+      <description>Linear Regression Simple Linear Regression  Minimizes residual sum of squares (RSS) - equivalent to minimizing RMSE Popultaion regression line is un observed -it&amp;rsquo;s the true model. True model + e gives at the whole popultaion What we can estimate is the least square regression line with the given data. The concept is analogous to popuation mean and sample mean. Least square estimates are unbiased. Proof? We can also compute the standard errors of the estimates.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/islr_4/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/islr_4/</guid>
+      <description>Logistic Regresion Why don&amp;rsquo;t we directly use linear regression MLE Estiamte For more than two classes?
+Linear Discriminant Analysis Why LDA apart from Logistic Regression?  When classes are well separated, the parameter estimates for the logistic regression are unstable. If n is small and X is normal for each class, LDA is more stable Popular for more than two classes  Why is it Linear? Guassian Assumption with shared coovariance across classes</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/islr_5/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/islr_5/</guid>
+      <description>Resampling Methods Model assesment and model selection - the process of evaluating a model&amp;rsquo;s performance is model assesment and the process of selecting the proper level of flexibility for a model is model selection.
+  The bootstrap is used in several contexts, most commonly model to provide a measure of accuracy of a parameter estimate or of a given selection statistical learning method.
+    </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/islr_8/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/islr_8/</guid>
+      <description>#Tree Based Methods
+  Basically stratifying or segmenting the predictor space into a number of simple regions. In order to make a prediction for a given observation, we typically use the mean or the mode of the training observations in the region to which it belongs.
+  Since the set of splitting rules used to segment the predictor space can be summarized in a tree, these types of approaches are known as decision tree methods.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://www.burhanusman.com/notes/temp/vue_tutorial/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/temp/vue_tutorial/</guid>
+      <description>Key Terms   v-model: binds data to inpit
+  v-bind: shorthand (:) - binds attributes to elements
+  double mustache- v-text
+  v-html - renders the html
+  v-once - update only once
+  v-for - {{cat}}  v-on shortcut(@)- for functions on buttons addkitty funcition v-on:keyup.enter=&amp;quot;addKitty&amp;rdquo;
+  filters {{cat | capitalize}}
+  Vue.Component({ props: templates })
+  Vue Lifecycle functions</description>
     </item>
     
   </channel>

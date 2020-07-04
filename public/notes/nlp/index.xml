@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>NLP on Burhan Usman</title>
+    <link>https://www.burhanusman.com/notes/nlp/</link>
+    <description>Recent content in NLP on Burhan Usman</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 06 Apr 2019 14:53:47 +0530</lastBuildDate>
+    
+	<atom:link href="https://www.burhanusman.com/notes/nlp/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Universal Sentence Encoder</title>
+      <link>https://www.burhanusman.com/notes/nlp/universal_sentence_encoder_for_text_similarity/</link>
+      <pubDate>Fri, 26 Apr 2019 21:54:24 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/notes/nlp/universal_sentence_encoder_for_text_similarity/</guid>
+      <description>import tensorflow_hub as hub from sklearn.metrics.pairwise import cosine_similarity import seaborn as sns import numpy as np /usr/local/lib/python3.6/dist-packages/statsmodels/tools/_testing.py:19: FutureWarning: pandas.util.testing is deprecated. Use the functions in the public API at pandas.testing instead.import pandas.util.testing as tm Loading the universal sentence encoder The USE model can be downloaded from TF-Hub. In Tensorflow 2, the model is in eager execution mode, hence the embeddings can be easily obtained.
+module_url = &amp;#34;https://tfhub.dev/google/universal-sentence-encoder/4&amp;#34; #@param [&amp;#34;https://tfhub.</description>
+    </item>
+    
+  </channel>
+</rss>

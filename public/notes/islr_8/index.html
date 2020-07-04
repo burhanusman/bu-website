@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-us" lang="en-us">
+<head>
+  <link href="//gmpg.org/xfn/11" rel="profile">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="Hugo 0.73.0" />
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title> &middot; Burhan Usman</title>
+
+  
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/print.css" media="print">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb"
+        crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/poole.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/syntax.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/hyde.css">
+  <link type="text/css" rel="stylesheet" href="https://www.burhanusman.com/css/bucustom.css">
+  
+  
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abril+Fatface|PT+Sans:400,400i,700">
+
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://www.burhanusman.com/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="https://www.burhanusman.com/favicon.png">
+
+  
+  <link href="" rel="alternate" type="application/rss+xml" title="Burhan Usman" />
+
+</head>
+
+  <body class=" ">
+  <aside class="sidebar">
+  <div class="container sidebar-sticky">
+    <div class="sidebar-about">
+      <a href="https://www.burhanusman.com/"><h1>Burhan Usman</h1></a>
+      <p class="lead">
+      An ML Enthusiast
+      </p>
+    </div>
+
+    <nav>
+      <ul class="sidebar-nav">
+        <li><a href="https://www.burhanusman.com/">Home</a> </li>
+        <li><a href="https://www.burhanusman.com/blog/"> Blog </a></li>
+      </ul>
+    </nav>
+  </div>
+</aside>
+
+    <main class="content container">
+    <div class="post">
+  <h1></h1>
+  <time datetime=0001-01-01T00:00:00Z class="post-date">Mon, Jan 1, 0001</time>
+  <p>#Tree Based Methods</p>
+<ul>
+<li>
+<p>Basically stratifying or segmenting the predictor space into a number of simple regions. In order to make a prediction for a given observation, we typically use the mean or the mode of the training observations in the region to which it belongs.</p>
+</li>
+<li>
+<p>Since the set of splitting rules used
+to segment the predictor space can be summarized in a tree, these types of
+approaches are known as decision tree methods.</p>
+</li>
+</ul>
+<h3 id="constructing-the-regions">Constructing the regions</h3>
+<ul>
+<li>The goal is to find boxes R1, . . . , RJ that minimize the RSS,
+given by 
+<!-- raw HTML omitted -->\begin{equation}
+\sum_{j=1}^{J} \sum_{i \in R_{j}}\left(y_{i}-\hat{y}_{R_{j}}\right)^{2}
+\end{equation}<!-- raw HTML omitted --></li>
+</ul>
+<p>where ˆyRj is the mean response for the training observations within the
+jth box.</p>
+<ul>
+<li>Top Down, Greedy aproach [Recursive Binary Splitting] :
+<ul>
+<li>The recursive binary splittin approach is top-down because it begins at the top of the tree (at which point all observations belong to a single region) and then successively splits the predictor space; each split is indicated via two new branches further down on the tree.</li>
+<li>It is greedy because at each step of the tree-building process, the best split is made at that particular step, rather than looking ahead and picking a split that will lead to a better tree in some future step.</li>
+</ul>
+</li>
+<li>At every split we try to find the predictor and the exact split value which reduces the RSS</li>
+</ul>
+<h3 id="tree-pruning">Tree Pruning</h3>
+<ul>
+<li>The tree may grow deep overfitting the train data.</li>
+<li>A smaller tree with fewer regions might be a better model</li>
+<li>One way - stop the splitting if decrease in RSS exceeds some threshold-short-sighted - not always good because one bad split earlier might lead to a good split in the later stages.</li>
+<li>Grow a large tree and prune it to the best subtree - in terms of RSS - evaluated by cross-valdiation. Doing this for every possible subtree is cumbursome</li>
+<li>Cost complexity pruning - Weakest link pruning - Similar to Lasso</li>
+</ul>
+<h3 id="classification-tree">Classification tree</h3>
+<ul>
+<li>
+<p>we predict that each observation belongs to the most commonly occurring class of training
+observations in the region to which it belongs</p>
+</li>
+<li>
+<p>natural alternative to RSS is the classification error rate</p>
+</li>
+<li>
+<p>Gini Index- a measure of node purity - <!-- raw HTML omitted -->\begin{equation}
+G=\sum_{k=1}^{K} \hat{p}_{m k}\left(1-\hat{p}_{m k}\right)
+\end{equation}<!-- raw HTML omitted --></p>
+</li>
+<li></li>
+</ul>
+
+</div>
+
+
+    </main>
+    
+<script type="application/javascript">
+var doNotTrack = false;
+if (!doNotTrack) {
+	window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+	ga('create', 'UA-138746712-1', 'auto');
+	
+	ga('send', 'pageview');
+}
+</script>
+<script async src='https://www.google-analytics.com/analytics.js'></script>
+
+  </body>
+</html>

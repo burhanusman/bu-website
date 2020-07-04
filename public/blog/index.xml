@@ -1,15 +1,48 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Blog on Burhan Usman</title>
-    <link>http://example.org/blog/</link>
+    <link>https://www.burhanusman.com/blog/</link>
     <description>Recent content in Blog on Burhan Usman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Sat, 06 Apr 2019 14:53:47 +0530</lastBuildDate>
     
-	<atom:link href="http://example.org/blog/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.burhanusman.com/blog/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>BatchNorm</title>
+      <link>https://www.burhanusman.com/blog/batchnorm/</link>
+      <pubDate>Mon, 12 Aug 2019 14:09:17 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/blog/batchnorm/</guid>
+      <description>I had a hard time wrapping my head around on why BatchNorm was used until I read &amp;lsquo;deeply&amp;rsquo; about it. I&amp;rsquo;ll try explaining the concept and the reason why it works.
+Normalization and Standardization in machine learning Although Normalization and standardization are often used interchangeably, it&amp;rsquo;s good to know the difference between them.
+ Normalization: Normalization means to scale a variable to have a values between 0 and 1 Standardization: Standardization transforms data to have a mean of zero and a standard deviation of 1</description>
+    </item>
+    
+    <item>
+      <title>Machine Learning at Amazon</title>
+      <link>https://www.burhanusman.com/blog/amazon_talk/</link>
+      <pubDate>Sat, 06 Apr 2019 14:09:17 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/blog/amazon_talk/</guid>
+      <description>&lt;p&gt;Recently I attended a talk by Mr Part Gupta, an ML engineer at Amazon. It was
+mostly about the Machine Learning use cases at Amazon. The talk was quite
+informative as I had attended few courses on Machine Learning and Information
+Retrieval. This post is a summary of the talk.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Zappos Footwear Classification</title>
+      <link>https://www.burhanusman.com/blog/zappos/</link>
+      <pubDate>Sat, 06 Apr 2019 14:09:17 +0530</pubDate>
+      
+      <guid>https://www.burhanusman.com/blog/zappos/</guid>
+      <description>Recently I stumbled across the well labelled Zappos50K dataset and realised a lot of interesting use cases can be built with it. I decided to start with a simple binary classification model to classify footwear on the basis of gender.
+The Setup I have used the Google Colab to do all the coding. You can easily try it yourself. For starters you would need to download the dataset from Univ. of Texas website.</description>
+    </item>
     
   </channel>
 </rss>
