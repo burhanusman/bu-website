@@ -1,8 +1,3 @@
----
-title: "Plotting a Normal Curve"
-date: 2019-04-26T21:54:24+05:30
-draft: false
----
 # Plotting a Normal Curve
 
 
@@ -30,7 +25,7 @@ sns.lineplot(x, norm.pdf(x,mu,sigma))
 ```
 
 
-![png](plotting_a_normal_curve_4_0.png)
+![png](plotting_a_normal_curve_3_0.png)
 
 
 We could shade the curve as below
@@ -42,22 +37,5 @@ plt.fill_between(x, norm.pdf(x,mu,sigma),alpha=.5);
 ```
 
 
-![png](plotting_a_normal_curve_6_0.png)
+![png](plotting_a_normal_curve_5_0.png)
 
-
-
-```python
-norm.ppf(0.00,mu,sigma)
-```
-
-
-
-
-    -inf
-
-
-
-
-```python
-
-```

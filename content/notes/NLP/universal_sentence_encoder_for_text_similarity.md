@@ -1,8 +1,5 @@
----
-title: "Universal Sentence Encoder"
-date: 2019-04-26T21:54:24+05:30
-draft: false
----
+# Universal Sentence Encoder
+
 
 ```python
 import tensorflow_hub as hub

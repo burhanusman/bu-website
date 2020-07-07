@@ -13,3 +13,14 @@
 .content.container.index-page{
 	padding: 1rem 1rem 0rem
 }
+
+.highlight pre{
+    border: 1px solid #ccc;
+    line-height: 1.42857143;
+    padding: 1em;
+  }
+
+h4.card-header{
+    margin-top: 0rem;
+    font-size: 1rem;
+}
