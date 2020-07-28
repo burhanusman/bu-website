@@ -1,12 +1,12 @@
---- 
-title: "Universal Sentence Encoser for Text Similarity" 
-author: "Burhan Usman" 
-date: 2020-07-20T11:53:49-07:00 
-description: "How to plot the learning curve in scikit-learn for machine learning in Python." 
-type: technical_note 
-draft: false 
 ---
+title: Universal Sentence Encoser for Text Similarity
+author: Burhan Usman
+date: 
+description: How to plot the learning curve in scikit-learn for machine learning in
+  Python.
+type: technical_note
 
+---
 ```python
 import tensorflow_hub as hub
 from sklearn.metrics.pairwise import cosine_similarity
@@ -146,4 +146,3 @@ run_and_plot(messages)
 
 
 ![png](universal_sentence_encoder_for_text_similarity_12_0.png)
-
